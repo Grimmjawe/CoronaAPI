@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" >
+    <title>Corona Stats Estonia</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-light dark">
+            <a href="#" class="navbar-brand"><%= data.countrytimelinedata[0].info.title %></a>
+        </nav>
+        <div class="row">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Dates</th>
+                        <th scope="col"><%= Object.keys(date)[0] %></th>
+                        <th scope="col"><%= Object.keys(date)[Object.keys(date).length-2] %></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="col">New daily cases</th>
+                        <th scope="col"><%= Object.keys(date)[0][0] %></th>
+                        <th scope="col"><%= Object.keys(date)[Object.keys(date).length-2][0] %></th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Total cases</th>
+                        <th scope="col"><%= date[Object.keys(date)[0]].total_cases %></th>
+                        <th scope="col"><%= date[Object.keys(date)[Object.keys(date).length-2]].total_cases %></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

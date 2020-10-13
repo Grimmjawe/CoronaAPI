@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+}
+.row{
+    margin: 0;
+}
+.navbar-brand{
+    color: white;
+}
